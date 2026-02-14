@@ -2,9 +2,18 @@
 
 Platform-managed skill registry for coding agents.
 
+> Status: experimental v0.1. APIs and manifest fields may evolve.
+
 ## What this is
 
-This repository hosts versioned skills in a standalone source of truth. A runtime can query the registry API, resolve a skill by name/version, verify checksums, and load the instructions.
+This repository is a standalone source of truth for reusable agent skills. A runtime can discover skills, resolve a specific version, verify checksums, and load the instruction payload.
+
+## Why this exists
+
+- Keep skill authoring separate from product repositories.
+- Version and validate skills consistently.
+- Expose a simple API that any runtime can consume.
+- Make behavior reproducible via explicit version pinning.
 
 ## Quick start
 
@@ -41,6 +50,28 @@ Server defaults to `http://localhost:8787`.
 - `GET /skills/:name`
 - `GET /skills/:name/:version`
 
+### Example
+
+```bash
+curl http://localhost:8787/skills
+curl http://localhost:8787/skills/react-performance
+curl http://localhost:8787/skills/react-performance/1.0.0
+```
+
+## Add a new skill
+
+1. Create a new folder: `skills/<skill-name>/`
+2. Add `skill.json`, `prompt.md`, and `README.md`
+3. Ensure `skill.json.name` matches the folder name
+4. Run validation and rebuild the index
+
+```bash
+npm run validate
+npm run build:index
+```
+
+5. Commit the changes
+
 ## Folder structure
 
 ```text
@@ -69,3 +100,9 @@ skills-registry/
 - Skills are authored in `skills/*`.
 - CI validates manifests and rebuilds `index.json`.
 - `index.json` acts as the canonical catalog for runtime discovery.
+
+## Security model (current)
+
+- Each published version includes a SHA-256 checksum in `index.json`.
+- Clients should verify downloaded manifest + instruction content against this checksum.
+- Signature-based verification can be layered on top in a future release.
