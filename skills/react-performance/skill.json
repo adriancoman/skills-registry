@@ -1,0 +1,12 @@
+{
+  "name": "react-performance",
+  "title": "React Performance",
+  "version": "1.0.0",
+  "description": "Diagnose and optimize render performance in React applications.",
+  "triggers": ["slow renders", "rerender loop", "react performance"],
+  "toolsAllowed": ["read", "glob", "grep", "bash"],
+  "minAgentVersion": "1.0.0",
+  "instructionFile": "prompt.md",
+  "owner": "platform-team",
+  "tags": ["react", "performance", "frontend"]
+}

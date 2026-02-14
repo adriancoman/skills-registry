@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-02-14T21:12:37.187Z",
+  "skillCount": 2,
+  "skills": [
+    {
+      "name": "api-hardening",
+      "title": "API Hardening",
+      "latestVersion": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "Enforce input validation, explicit error handling, and safe API defaults.",
+          "triggers": [
+            "api security",
+            "input validation",
+            "error handling"
+          ],
+          "toolsAllowed": [
+            "read",
+            "glob",
+            "grep",
+            "bash"
+          ],
+          "minAgentVersion": "1.0.0",
+          "checksumSha256": "33442fab9470bb960513f3ac4eae57a9353cd017f5ca111bf57dbff1025a25f4",
+          "manifestPath": "skills/api-hardening/skill.json",
+          "instructionPath": "skills/api-hardening/prompt.md"
+        }
+      ]
+    },
+    {
+      "name": "react-performance",
+      "title": "React Performance",
+      "latestVersion": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "Diagnose and optimize render performance in React applications.",
+          "triggers": [
+            "slow renders",
+            "rerender loop",
+            "react performance"
+          ],
+          "toolsAllowed": [
+            "read",
+            "glob",
+            "grep",
+            "bash"
+          ],
+          "minAgentVersion": "1.0.0",
+          "checksumSha256": "4c58ca49e5e300cb38ca4785d2efbbfc4e0211d9564ffb2d795db4ba2da37448",
+          "manifestPath": "skills/react-performance/skill.json",
+          "instructionPath": "skills/react-performance/prompt.md"
+        }
+      ]
+    }
+  ]
+}

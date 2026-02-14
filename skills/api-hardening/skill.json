@@ -1,0 +1,12 @@
+{
+  "name": "api-hardening",
+  "title": "API Hardening",
+  "version": "1.0.0",
+  "description": "Enforce input validation, explicit error handling, and safe API defaults.",
+  "triggers": ["api security", "input validation", "error handling"],
+  "toolsAllowed": ["read", "glob", "grep", "bash"],
+  "minAgentVersion": "1.0.0",
+  "instructionFile": "prompt.md",
+  "owner": "platform-team",
+  "tags": ["backend", "security", "api"]
+}
