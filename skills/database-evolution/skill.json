@@ -1,0 +1,12 @@
+{
+  "name": "database-evolution",
+  "title": "Schema Evolution",
+  "version": "1.0.0",
+  "description": "Safely propose and apply database schema changes with risk and rollback planning.",
+  "triggers": ["schema change", "migration", "database evolution"],
+  "toolsAllowed": ["read", "glob", "grep", "bash"],
+  "minAgentVersion": "1.0.0",
+  "instructionFile": "prompt.md",
+  "owner": "platform-team",
+  "tags": ["database", "migrations", "safety"]
+}

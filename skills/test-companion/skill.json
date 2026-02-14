@@ -1,0 +1,12 @@
+{
+  "name": "test-companion",
+  "title": "Test Companion",
+  "version": "1.0.0",
+  "description": "Ensure production code changes are paired with high-quality, branch-complete unit tests.",
+  "triggers": ["add tests", "coverage gaps", "test companion"],
+  "toolsAllowed": ["read", "glob", "grep", "bash"],
+  "minAgentVersion": "1.0.0",
+  "instructionFile": "prompt.md",
+  "owner": "platform-team",
+  "tags": ["testing", "quality", "unit-tests"]
+}

@@ -34,6 +34,19 @@ const server = createServer(async (req, res) => {
       return json(res, 200, { ok: true, service: "skills-registry" });
     }
 
+    if (pathname === "/") {
+      return json(res, 200, {
+        service: "skills-registry",
+        status: "ok",
+        routes: [
+          "GET /health",
+          "GET /skills",
+          "GET /skills/:name",
+          "GET /skills/:name/:version",
+        ],
+      });
+    }
+
     const index = await readIndex();
 
     if (pathname === "/skills") {

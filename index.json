@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-02-14T21:12:37.187Z",
-  "skillCount": 2,
+  "generatedAt": "2026-02-14T21:34:49.446Z",
+  "skillCount": 6,
   "skills": [
     {
       "name": "api-hardening",
@@ -29,6 +29,84 @@
       ]
     },
     {
+      "name": "database-evolution",
+      "title": "Schema Evolution",
+      "latestVersion": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "Safely propose and apply database schema changes with risk and rollback planning.",
+          "triggers": [
+            "schema change",
+            "migration",
+            "database evolution"
+          ],
+          "toolsAllowed": [
+            "read",
+            "glob",
+            "grep",
+            "bash"
+          ],
+          "minAgentVersion": "1.0.0",
+          "checksumSha256": "38b2395f79c3fe49a4c5a6fadf7d1763a940a2073a533f40ab8b2ada015cf88e",
+          "manifestPath": "skills/database-evolution/skill.json",
+          "instructionPath": "skills/database-evolution/prompt.md"
+        }
+      ]
+    },
+    {
+      "name": "linear-context-parser",
+      "title": "Linear Ticket Enforcement",
+      "latestVersion": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "Load and enforce Linear ticket context before implementation begins.",
+          "triggers": [
+            "LOT-",
+            "linear ticket",
+            "ticket context"
+          ],
+          "toolsAllowed": [
+            "read",
+            "glob",
+            "grep",
+            "bash"
+          ],
+          "minAgentVersion": "1.0.0",
+          "checksumSha256": "b48aaf4de025df2a02a4bbd7a257b9a4ed607cc6557add4aba02c9c2d8e74a7d",
+          "manifestPath": "skills/linear-context-parser/skill.json",
+          "instructionPath": "skills/linear-context-parser/prompt.md"
+        }
+      ]
+    },
+    {
+      "name": "linear-updater",
+      "title": "Linear Sync",
+      "latestVersion": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "Synchronize approved implementation plans into well-structured Linear tasks.",
+          "triggers": [
+            "sync to linear",
+            "approved plan",
+            "create linear tasks"
+          ],
+          "toolsAllowed": [
+            "read",
+            "glob",
+            "grep",
+            "bash"
+          ],
+          "minAgentVersion": "1.0.0",
+          "checksumSha256": "c8dd3afcc6fe93c72f6a7b50250ff78856ff4f8b6f784b650fbe0a0b8cec809c",
+          "manifestPath": "skills/linear-updater/skill.json",
+          "instructionPath": "skills/linear-updater/prompt.md"
+        }
+      ]
+    },
+    {
       "name": "react-performance",
       "title": "React Performance",
       "latestVersion": "1.0.0",
@@ -51,6 +129,32 @@
           "checksumSha256": "4c58ca49e5e300cb38ca4785d2efbbfc4e0211d9564ffb2d795db4ba2da37448",
           "manifestPath": "skills/react-performance/skill.json",
           "instructionPath": "skills/react-performance/prompt.md"
+        }
+      ]
+    },
+    {
+      "name": "test-companion",
+      "title": "Test Companion",
+      "latestVersion": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "Ensure production code changes are paired with high-quality, branch-complete unit tests.",
+          "triggers": [
+            "add tests",
+            "coverage gaps",
+            "test companion"
+          ],
+          "toolsAllowed": [
+            "read",
+            "glob",
+            "grep",
+            "bash"
+          ],
+          "minAgentVersion": "1.0.0",
+          "checksumSha256": "9274d893b7d0a0707e4be7e57ef92daf5510f8c4942539e918f4049efd91480c",
+          "manifestPath": "skills/test-companion/skill.json",
+          "instructionPath": "skills/test-companion/prompt.md"
         }
       ]
     }

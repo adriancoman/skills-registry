@@ -1,0 +1,12 @@
+{
+  "name": "linear-updater",
+  "title": "Linear Sync",
+  "version": "1.0.0",
+  "description": "Synchronize approved implementation plans into well-structured Linear tasks.",
+  "triggers": ["sync to linear", "approved plan", "create linear tasks"],
+  "toolsAllowed": ["read", "glob", "grep", "bash"],
+  "minAgentVersion": "1.0.0",
+  "instructionFile": "prompt.md",
+  "owner": "platform-team",
+  "tags": ["linear", "project-management", "execution"]
+}

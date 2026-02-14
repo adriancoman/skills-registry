@@ -1,0 +1,12 @@
+{
+  "name": "linear-context-parser",
+  "title": "Linear Ticket Enforcement",
+  "version": "1.0.0",
+  "description": "Load and enforce Linear ticket context before implementation begins.",
+  "triggers": ["LOT-", "linear ticket", "ticket context"],
+  "toolsAllowed": ["read", "glob", "grep", "bash"],
+  "minAgentVersion": "1.0.0",
+  "instructionFile": "prompt.md",
+  "owner": "platform-team",
+  "tags": ["linear", "requirements", "planning"]
+}
