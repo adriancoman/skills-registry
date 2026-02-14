@@ -58,6 +58,30 @@ curl http://localhost:8787/skills/react-performance
 curl http://localhost:8787/skills/react-performance/1.0.0
 ```
 
+## Getting started for consumers
+
+### 1) Resolve latest skill metadata
+
+```bash
+curl -s http://localhost:8787/skills/react-performance | jq
+```
+
+### 2) Resolve a pinned version
+
+```bash
+curl -s http://localhost:8787/skills/react-performance/1.0.0 | jq
+```
+
+### 3) Verify integrity (example flow)
+
+```bash
+SKILL_JSON="$(curl -s http://localhost:8787/skills/react-performance/1.0.0)"
+CHECKSUM="$(printf '%s' "$SKILL_JSON" | jq -r '.checksumSha256')"
+echo "Expected checksum: $CHECKSUM"
+```
+
+Clients should recompute and compare checksums for the canonical payload they load.
+
 ## Add a new skill
 
 1. Create a new folder: `skills/<skill-name>/`
